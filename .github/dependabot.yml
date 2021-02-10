@@ -1,36 +1,44 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
 
-  - package-ecosystem: "nuget"
-    directory: "/src/csharp/"
+  - package-ecosystem: nuget
+    directory: /src/csharp/
     schedule:
-      interval: "daily"
+      interval: daily
 
-  - package-ecosystem: "cargo"
-    directory: "/src/rust/iced-x86/"
+  - package-ecosystem: cargo
+    directory: /src/rust/iced-x86/
     schedule:
-      interval: "daily"
+      interval: daily
+    allow:
+      - dependency-type: all
 
-  - package-ecosystem: "cargo"
-    directory: "/src/rust/iced-x86-fzgt/"
+  - package-ecosystem: cargo
+    directory: /src/rust/iced-x86-fzgt/
     schedule:
-      interval: "daily"
+      interval: daily
+    allow:
+      - dependency-type: all
 
-  - package-ecosystem: "cargo"
-    directory: "/src/rust/iced-x86-js/"
+  - package-ecosystem: cargo
+    directory: /src/rust/iced-x86-js/
     schedule:
-      interval: "daily"
+      interval: daily
+    allow:
+      - dependency-type: all
 
-  - package-ecosystem: "cargo"
-    directory: "/src/rust/iced-x86-py/"
+  - package-ecosystem: cargo
+    directory: /src/rust/iced-x86-py/
     schedule:
-      interval: "daily"
+      interval: daily
+    allow:
+      - dependency-type: all
 
-  - package-ecosystem: "npm"
-    directory: "/src/rust/iced-x86-js/src/tests/"
+  - package-ecosystem: npm
+    directory: /src/rust/iced-x86-js/src/tests/
     schedule:
-      interval: "daily"
+      interval: daily
